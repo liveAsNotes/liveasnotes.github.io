@@ -47,3 +47,10 @@ nav{
 ul[nv]{
   list-style: none;
 }
+
+section{
+  display: none;
+}
+section:target{
+  display: block;
+}
