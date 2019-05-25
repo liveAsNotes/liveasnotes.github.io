@@ -48,6 +48,13 @@ ul[nv]{
   list-style: none;
 }
 
+#notes > ul{
+  list-style: none;
+}
+#notes > ul >li::before{
+  content: "- ";
+}
+
 section{
   display: none;
 }
