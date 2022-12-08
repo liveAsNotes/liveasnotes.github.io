@@ -1,0 +1,603 @@
+<!DOCTYPE html><html lang="ja-JP"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{-webkit-tap-highlight-color:transparent;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTQwIDcwSDIwVjUwbTIwIDBMMjAgNzBtNDAtNDBoMjB2MjBtLTIwIDAgMjAtMjAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTIwIDUwaDIwdjIwbS0yMCAwIDIwLTIwbTQwIDBINjBWMzBtMjAgMEw2MCA1MCIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iNSIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-bigger{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNMTIgNTBoODBNNTIgOTBWMTAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjUiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-smaller{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNMTIgNTBoODAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjUiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{-webkit-animation-name:__bespoke_marp__!important;animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{bottom:0;left:0;position:absolute;right:0;top:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:rgba(0,0,0,.65);border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;will-change:transform;z-index:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>*,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:first-child,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+.bespoke-marp-parent{top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:transparent}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current dragbar next" minmax(140px,1fr) "current dragbar note" 2fr "info    dragbar note" 3em;grid-template-columns:minmax(3px,var(--bespoke-marp-presenter-split-ratio,66%)) 0 minmax(3px,1fr);height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent{grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide{height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container{background:#0288d1;cursor:col-resize;grid-area:dragbar;margin-left:-3px;opacity:0;position:relative;transition:opacity .4s linear .1s;width:6px;z-index:10}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container:hover{opacity:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container.active{opacity:1;transition-delay:0s}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:transparent;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note;position:relative;z-index:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper{bottom:0;display:block;left:0;position:absolute;right:0;top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons{background:rgba(0,0,0,.65);border-radius:4px;bottom:0;display:flex;gap:4px;margin:12px;opacity:0;padding:6px;pointer-events:none;position:absolute;right:0;transition:opacity .2s linear}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons:focus-within,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper:focus-within+.bespoke-marp-presenter-note-buttons,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container:hover .bespoke-marp-presenter-note-buttons{opacity:1;pointer-events:auto}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{word-wrap:break-word;box-sizing:border-box;font-size:calc(1.1em*var(--bespoke-marp-note-font-scale, 1));height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;scrollbar-color:hsla(0,0%,93%,.5) transparent;scrollbar-width:thin;white-space:pre-wrap;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:transparent}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:hsla(0,0%,93%,.5);border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;overflow:hidden;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page .bespoke-marp-presenter-info-page-text{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer:hover{cursor:pointer}}@media print{.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>@charset "UTF-8";@import url("https://fonts.googleapis.com/css?family=Lato:400,900|Roboto+Mono:400,700&display=swap");div#p>svg>foreignObject>section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center}div#p>svg>foreignObject>section:after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#p>svg>foreignObject>section:not([data-marpit-pagination]):after{display:none}/* Normalization */div#p>svg>foreignObject>section h1{font-size:2em;margin:0.67em 0}div#p>svg>foreignObject>section video::-webkit-media-controls{will-change:transform}@page{size:1280px 720px;margin:0}@media print{body,html{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#p>svg>foreignObject>section{page-break-before:always;break-before:page}div#p>svg>foreignObject>section,div#p>svg>foreignObject>section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;transition:none!important}div#p>svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{display:block;height:auto;width:100%}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{position:static}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{content:""}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{position:relative}}div#p>svg>foreignObject>section [data-marp-fitting-svg-content]{display:table;white-space:nowrap;width:-webkit-max-content;width:-moz-max-content;width:max-content}div#p>svg>foreignObject>section [data-marp-fitting-svg-content-wrap]{white-space:pre}div#p>svg>foreignObject>section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}
+/*!
+ * Marp / Marpit Gaia theme.
+ *
+ * @theme gaia
+ * @author Yuki Hattori
+ *
+ * @auto-scaling true
+ * @size 16:9 1280px 720px
+ * @size 4:3 960px 720px
+ */div#p>svg>foreignObject>section .hljs{background:#000;color:#f8f8f8;display:block;overflow-x:auto;padding:.5em}div#p>svg>foreignObject>section .hljs-comment,div#p>svg>foreignObject>section .hljs-quote{color:#aeaeae;font-style:italic}div#p>svg>foreignObject>section .hljs-keyword,div#p>svg>foreignObject>section .hljs-selector-tag,div#p>svg>foreignObject>section .hljs-type{color:#e28964}div#p>svg>foreignObject>section .hljs-string{color:#65b042}div#p>svg>foreignObject>section .hljs-subst{color:#daefa3}div#p>svg>foreignObject>section .hljs-link,div#p>svg>foreignObject>section .hljs-regexp{color:#e9c062}div#p>svg>foreignObject>section .hljs-name,div#p>svg>foreignObject>section .hljs-section,div#p>svg>foreignObject>section .hljs-tag,div#p>svg>foreignObject>section .hljs-title{color:#89bdff}div#p>svg>foreignObject>section .hljs-class .hljs-title,div#p>svg>foreignObject>section .hljs-doctag{text-decoration:underline}div#p>svg>foreignObject>section .hljs-bullet,div#p>svg>foreignObject>section .hljs-number,div#p>svg>foreignObject>section .hljs-symbol{color:#3387cc}div#p>svg>foreignObject>section .hljs-params,div#p>svg>foreignObject>section .hljs-template-variable,div#p>svg>foreignObject>section .hljs-variable{color:#3e87e3}div#p>svg>foreignObject>section .hljs-attribute{color:#cda869}div#p>svg>foreignObject>section .hljs-meta{color:#8996a8}div#p>svg>foreignObject>section .hljs-formula{background-color:#0e2231;color:#f8f8f8;font-style:italic}div#p>svg>foreignObject>section .hljs-addition{background-color:#253b22;color:#f8f8f8}div#p>svg>foreignObject>section .hljs-deletion{background-color:#420e09;color:#f8f8f8}div#p>svg>foreignObject>section .hljs-selector-class{color:#9b703f}div#p>svg>foreignObject>section .hljs-selector-id{color:#8b98ab}div#p>svg>foreignObject>section .hljs-emphasis{font-style:italic}div#p>svg>foreignObject>section .hljs-strong{font-weight:700}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{max-height:580px}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2,div#p>svg>foreignObject>section h3,div#p>svg>foreignObject>section h4,div#p>svg>foreignObject>section h5,div#p>svg>foreignObject>section h6{margin:.5em 0 0}div#p>svg>foreignObject>section h1 strong,div#p>svg>foreignObject>section h2 strong,div#p>svg>foreignObject>section h3 strong,div#p>svg>foreignObject>section h4 strong,div#p>svg>foreignObject>section h5 strong,div#p>svg>foreignObject>section h6 strong{font-weight:inherit}div#p>svg>foreignObject>section h1{font-size:1.8em}div#p>svg>foreignObject>section h2{font-size:1.5em}div#p>svg>foreignObject>section h3{font-size:1.3em}div#p>svg>foreignObject>section h4{font-size:1.1em}div#p>svg>foreignObject>section h5{font-size:1em}div#p>svg>foreignObject>section h6{font-size:.9em}div#p>svg>foreignObject>section blockquote,div#p>svg>foreignObject>section p{margin:1em 0 0}div#p>svg>foreignObject>section ol>li,div#p>svg>foreignObject>section ul>li{margin:.3em 0 0}div#p>svg>foreignObject>section ol>li>p,div#p>svg>foreignObject>section ul>li>p{margin:.6em 0 0}div#p>svg>foreignObject>section code{display:inline-block;font-family:Roboto Mono,monospace;font-size:.8em;letter-spacing:0;margin:-.1em .15em;padding:.1em .2em;vertical-align:baseline}div#p>svg>foreignObject>section pre{display:block;margin:1em 0 0;min-height:1em;overflow:visible}div#p>svg>foreignObject>section pre code{box-sizing:border-box;font-size:.7em;margin:0;min-width:100%;padding:.5em}div#p>svg>foreignObject>section pre code svg[data-marp-fitting=svg]{max-height:calc(580px - 1em)}div#p>svg>foreignObject>section blockquote{margin:1em 0 0;padding:0 1em;position:relative}div#p>svg>foreignObject>section blockquote:after,div#p>svg>foreignObject>section blockquote:before{content:"“";display:block;font-family:Times New Roman,serif;font-weight:700;position:absolute}div#p>svg>foreignObject>section blockquote:before{left:0;top:0}div#p>svg>foreignObject>section blockquote:after{bottom:0;right:0;transform:rotate(180deg)}div#p>svg>foreignObject>section blockquote>:first-child{margin-top:0}div#p>svg>foreignObject>section mark{background:transparent}div#p>svg>foreignObject>section table{border-collapse:collapse;border-spacing:0;margin:1em 0 0}div#p>svg>foreignObject>section table td,div#p>svg>foreignObject>section table th{border-style:solid;border-width:1px;padding:.2em .4em}div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header,div#p>svg>foreignObject>section:after{box-sizing:border-box;font-size:66%;height:70px;line-height:50px;overflow:hidden;padding:10px 25px;position:absolute}div#p>svg>foreignObject>section:after{--marpit-root-font-size:66%}div#p>svg>foreignObject>section header{top:0}div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header{left:0;right:0}div#p>svg>foreignObject>section footer{bottom:0}div#p>svg>foreignObject>section{word-wrap:break-word;--color-background:#fff8e1;--color-background-stripe:rgba(69,90,100,.1);--color-foreground:#455a64;--color-dimmed:#6a7a7d;--color-highlight:#0288d1;background-color:var(--color-background);background-image:linear-gradient(135deg,hsla(0,0%,53%,0),hsla(0,0%,53%,.02) 50%,hsla(0,0%,100%,0) 0,hsla(0,0%,100%,.05));color:var(--color-foreground);font-family:Lato,Avenir Next,Avenir,Trebuchet MS,Segoe UI,sans-serif;font-size:35px;height:720px;letter-spacing:1.25px;line-height:1.35;padding:70px;width:1280px}div#p>svg>foreignObject>section{--marpit-root-font-size:35px}div#p>svg>foreignObject>section:after{bottom:0;font-size:80%;right:0}div#p>svg>foreignObject>section:after{--marpit-root-font-size:80%}div#p>svg>foreignObject>section a,div#p>svg>foreignObject>section mark{color:var(--color-highlight)}div#p>svg>foreignObject>section code{background:var(--color-dimmed);color:var(--color-background)}div#p>svg>foreignObject>section h1 strong,div#p>svg>foreignObject>section h2 strong,div#p>svg>foreignObject>section h3 strong,div#p>svg>foreignObject>section h4 strong,div#p>svg>foreignObject>section h5 strong,div#p>svg>foreignObject>section h6 strong{color:var(--color-highlight)}div#p>svg>foreignObject>section pre>code{background:var(--color-foreground)}div#p>svg>foreignObject>section blockquote:after,div#p>svg>foreignObject>section blockquote:before,div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header,div#p>svg>foreignObject>section section:after{color:var(--color-dimmed)}div#p>svg>foreignObject>section table td,div#p>svg>foreignObject>section table th{border-color:var(--color-foreground)}div#p>svg>foreignObject>section table thead th{background:var(--color-foreground);color:var(--color-background)}div#p>svg>foreignObject>section table tbody>tr:nth-child(odd) td,div#p>svg>foreignObject>section table tbody>tr:nth-child(odd) th{background:var(--color-background-stripe,transparent)}div#p>svg>foreignObject>section>:first-child,div#p>svg>foreignObject>section>header:first-child+*{margin-top:0}div#p>svg>foreignObject>section.invert{--color-background:#455a64;--color-background-stripe:rgba(255,248,225,.1);--color-foreground:#fff8e1;--color-dimmed:#dad8c8;--color-highlight:#81d4fa}div#p>svg>foreignObject>section.gaia{--color-background:#0288d1;--color-background-stripe:rgba(255,248,225,.1);--color-foreground:#fff8e1;--color-dimmed:#cce2de;--color-highlight:#81d4fa}div#p>svg>foreignObject>section.lead{display:flex;flex-flow:column nowrap;justify-content:center}div#p>svg>foreignObject>section.lead h1,div#p>svg>foreignObject>section.lead h2,div#p>svg>foreignObject>section.lead h3,div#p>svg>foreignObject>section.lead h4,div#p>svg>foreignObject>section.lead h5,div#p>svg>foreignObject>section.lead h6{text-align:center}div#p>svg>foreignObject>section.lead h1 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h2 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h3 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h4 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h5 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h6 svg[data-marp-fitting=svg]{--preserve-aspect-ratio:xMidYMid meet}div#p>svg>foreignObject>section.lead p{text-align:center}div#p>svg>foreignObject>section.lead blockquote>h1,div#p>svg>foreignObject>section.lead blockquote>h2,div#p>svg>foreignObject>section.lead blockquote>h3,div#p>svg>foreignObject>section.lead blockquote>h4,div#p>svg>foreignObject>section.lead blockquote>h5,div#p>svg>foreignObject>section.lead blockquote>h6,div#p>svg>foreignObject>section.lead blockquote>p{text-align:left}div#p>svg>foreignObject>section.lead blockquote svg[data-marp-fitting=svg]:not([data-marp-fitting-math]){--preserve-aspect-ratio:xMinYMin meet}div#p>svg>foreignObject>section.lead ol>li>p,div#p>svg>foreignObject>section.lead ul>li>p{text-align:left}div#p>svg>foreignObject>section.lead table{margin-left:auto;margin-right:auto}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]{columns:initial!important;display:block!important;padding:0!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=content],div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id="p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-class="lead" data-theme="gaia" class="lead" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--class:lead;--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h1><strong>情報セキュリティ</strong></h1>
+
+<p>(c) 2022 liveasnotes</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-background-color="#fff" data-background-image="none" data-theme="gaia" style="--background-color:#fff;--background-image:none;--theme:gaia;background-color:#fff;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h1>Note:</h1>
+<p>この資料は情報科学を専門的に学んでいない方に向けて、１時間半で情報セキュリティとその基礎について概観してもらうために作成したものです。<br />
+技術的な詳細はかなり省いていますが、間違いがあれば必要に応じて修正していくので、随意ご指摘いただければ幸いです。</p>
+<p>また、この資料はクリエイティブコモンズライセンス 表示 4.0 国際: <a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a> で公開しているので、内容については適切な著作権表記の下、自由に再利用できます。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-background-color="#111" data-background-image="none" data-class="lead" data-theme="gaia" class="lead" style="--background-color:#111;--background-image:none;--class:lead;--theme:gaia;background-color:#111;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;">
+<p><strong style="color: #ccc; text-shadow: 0 0 20px rgba(150, 150 ,255, 1);">隠されたプロセス</strong></p>
+<p>私たちを繋ぐもの</p>
+<p><span style="margin-left: .6em">&quot;彼ら&quot; は見ている。</span></p>
+<p>デザインとハック</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h1><strong>隠されたプロセス</strong></h1>
+<p>コンピューターは、世界をどう見ているのか？<br />
+私たちがそれを触るとき、なにが起きているのか？</p>
+<p>私たちに隠されたそのプロセスを、少しだけ覗いてみよう。</p>
+<p>keywords:<br />
+2 進数，フォーマット，ファイルシステム，GUI，WYSIWYG</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./rsc/600px-Clarke_sm.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="5" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<blockquote>
+<p>Any sufficiently advanced technology is indistinguishable from magic.<br />
+ー Arthur C. Clarke</p>
+</blockquote>
+<p>十分に発達した科学は、<br />
+魔法と見分けがつかない。</p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<p><strong>現代の魔法: コンピューター</strong></p>
+<p>多くの人が仕組みを理解しないまま使っている。<br />
+それは理解しないまま使えるように工夫を重ねてきたから。</p>
+<p>でも、トラブルを自力で解決したり、<br />
+新しい挑戦をするには、知識が必要。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>コンピューターは何をしているのか？</h2>
+<ul>
+<li>データを読み込む（load/input）</li>
+<li>データを処理する（process）</li>
+<li>データを書き出す（write/output）</li>
+</ul>
+<p><strong>Computer:「計算器」</strong><br />
+スマートフォンは、電気の力で動く<br />
+精緻なピタゴラ装置とも言える。</p>
+
+<p><img class="emoji" draggable="false" alt="🤔" src="https://twemoji.maxcdn.com/v/14.0.2/svg/1f914.svg" data-marp-twemoji=""/>「ピタゴラ装置？」</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="vertical"><figure style="background-image:url(&quot;./rsc/bg_wave-q.png&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="8" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-advanced-background="content">
+<h2>2 進数</h2>
+<p>そもそもコンピューターは電気の<strong>高低</strong>でデータを捉えている。<br />
+低いときは<code>0</code>、高いときは<code>1</code>として扱う。</p>
+<p>この<code>0</code>と<code>1</code>を<strong>ビット</strong>と呼ぶ。<br />
+ビットをたくさん並べると、数値や文字など多彩な表現ができる。</p>
+<p>Degitus：「指」<br />
+「デジタル」は整数のような離散値。<br />
+「アナログ」は小数のような連続値。</p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="left"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://image.jimcdn.com/app/cms/image/transf/dimension=661x10000:format=png/path/s9a246d2d2c830e8d/image/i77bdab51b44d4889/version/1424716737/image.png&quot;);background-size:90%;"></figure></div></section></foreignObject><foreignObject width="50%" height="720" x="50%"><section id="9" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="left">
+<p><strong>論理ゲート</strong><br />
+入力に応じて、<br />
+出力を変える部品。</p>
+<p>出力は<code>OR</code>，<code>AND</code>，<code>NOT</code>，<code>XOR</code> の組み合わせで表現できる。</p>
+
+<p>たくさんの論理ゲートを組み合わせることで、複雑な処理を実現する。</p>
+<p><small style="font-size: .4em">image source: <a href="https://indirect2435.jimdofree.com/%E8%AB%96%E7%90%86%E5%9B%9E%E8%B7%AF/">https://indirect2435.jimdofree.com/論理回路/</a></small></p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="left"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<p>コンピューターは<code>0</code>と<code>1</code>の<br />
+羅列を見ている。</p>
+<p>2 進数では<code>0</code>と<code>1</code>の２種類だけ。<br />
+⇒ 　すぐに繰り上がる。</p>
+<p><code>2</code>と<code>1/2</code>の倍数の組み合わせだけ。<br />
+⇒ 　小数点以下の表現に限界あり。<br />
+→ 　小数点を動かして計算する。</p>
+<p>文字は ASCII や Unicode などの<br />
+ルールに沿って割り当てられる。<br />
+⇒ 　文字化けが起きることも…</p>
+<div style="position: fixed; top: .5em; right:10em">
+<table>
+<thead>
+<tr>
+<th>2 進数</th>
+<th>10 進数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0000</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>0001</strong></td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>0010</strong></td>
+<td>2</td>
+</tr>
+<tr>
+<td>0011</td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>0100</strong></td>
+<td>4</td>
+</tr>
+<tr>
+<td>0101</td>
+<td>5</td>
+</tr>
+<tr>
+<td>0110</td>
+<td>6</td>
+</tr>
+<tr>
+<td>0111</td>
+<td>7</td>
+</tr>
+<tr>
+<td><strong>1000</strong></td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="position: fixed; top: .5em; right:1em">
+<table>
+<thead>
+<tr>
+<th>2 進数</th>
+<th>10 進数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.0000</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>0.0001</strong></td>
+<td>0.0625</td>
+</tr>
+<tr>
+<td><strong>0.0010</strong></td>
+<td>0.125</td>
+</tr>
+<tr>
+<td>0.0011</td>
+<td>0.1875</td>
+</tr>
+<tr>
+<td><strong>0.0100</strong></td>
+<td>0.25</td>
+</tr>
+<tr>
+<td>0.0101</td>
+<td>0.3125</td>
+</tr>
+<tr>
+<td>0.0110</td>
+<td>0.375</td>
+</tr>
+<tr>
+<td>0.0111</td>
+<td>0.4375</td>
+</tr>
+<tr>
+<td><strong>0.1000</strong></td>
+<td>0.5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<p>アプリにとっての読取・処理・出力</p>
+<ul>
+<li>
+<p>命令の読み取り</p>
+<ul>
+<li>人間向けコード（文字列）から機械語（<code>0</code>, <code>1</code>）へ</li>
+</ul>
+</li>
+<li>
+<p>命令に合わせた処理</p>
+<ul>
+<li>論理回路を通じて計算処理</li>
+</ul>
+</li>
+<li>
+<p>処理結果の出力</p>
+<ul>
+<li>計算結果（<code>0</code>, <code>1</code>）を人間が扱える情報に変換</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>フォーマット</h2>
+<p>私たちが普段見ている「ファイル」は、ひとつのデータではない。<br />
+たくさんのデータをまとめたもの。</p>
+<p>文字列「あいう」の正体は<code>11100011 10000001 10000010 11100011 10000001 10000100 11100011 10000001 10000110</code>のようなビット列。<br />
+<span style="font-size: .55em">変換ツール：バイナリ 変換 - バイナリ テキスト 変換 | Duplichecker <a href="https://www.duplichecker.com/ja/binary-translator">https://www.duplichecker.com/ja/binary-translator</a></span></p>
+<p>画像や動画も、<br />
+ビット列を一定のルール（フォーマット）に沿って並べたもの。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./rsc/hex_1.png&quot;);background-size:75%;"></figure><figure style="background-image:url(&quot;./rsc/hex_2.png&quot;);background-size:75%;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="13" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<p>データのフォーマットは、ものによって異なる。<br />
+ファイル名の末尾に付ける<strong>拡張子</strong>は、フォーマットを示すもの。</p>
+<p>拡張子だけを変えても、ファイルの中身は変わらない。<br />
+⇒ 　正しく読み取れなくなってしまう。</p>
+<ul>
+<li>「Word / PDF で」</li>
+<li>「MP3 / WAV で」</li>
+</ul>
+<p>変換は各ソフトウェアの機能を使って行う。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:35%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./rsc/defragmentation_01.jpg&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="65%" height="720"><section id="15" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:35%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h2>ファイルシステム</h2>
+<p>たくさんのファイルのデータを管理する仕組み。ファイルのデータは必ずしも連続して保存されているわけではない。データの削除はデータの住所を消しているだけ。<br />
+<span style="font-size: .6em">cf. デフラグ（image source: <a href="https://enjoy.sso.biglobe.ne.jp/archives/defragmentation/">https://enjoy.sso.biglobe.ne.jp/archives/defragmentation/</a></span><br />
+</p>
+<p><strong>フォルダ</strong><br />
+「ファイル」はデータの入れ物（建物）<br />
+「フォルダ」はファイルの入れ物（住所）</p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>GUI: Graphical User Interface</h2>
+<p>コンピューターの内部では全て<code>0</code>と<code>1</code>の羅列で処理していても、<br />
+人間が扱いやすいように、グラフィックを使って表現する。</p>
+<p>スマホをタップするとき：</p>
+<p>GUI 上での操作（特定領域の押下）を検知して、<br />
+内部でのデータ処理（領域に応じた、読み書き、変換や計算）<br />
+が行われる。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>WYSIWYG: <br />What you see is what you get</h2>
+<p>データと GUI 上での表示はまったく別物。<br />
+データをそのまま編集するのは大変。</p>
+<p><span style="color: blue; border: 1px solid; padding: .1em .75em">Lorem ipsum ...</span></p>
+<p><code>&lt;span style=&quot;color: blue; border: 1px solid; padding: .1em .75em&quot;&gt;Lorem ipsum ...&lt;/span&gt;</code></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-class="lead" data-theme="gaia" class="lead" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--class:lead;--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<p>面倒なことは、システムに任せよう。</p>
+<p>その積み重ねが &quot;魔法&quot; になっている。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-background-color="#111" data-background-image="none" data-class="lead" data-theme="gaia" class="lead" style="--background-color:#111;--background-image:none;--class:lead;--theme:gaia;background-color:#111;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;">
+<p>隠されたプロセス</p>
+<p><strong style="color: #ccc; text-shadow: 0 0 20px rgba(150, 150 ,255, 1);">私たちを繋ぐもの</strong></p>
+<p><span style="margin-left: .6em">&quot;彼ら&quot; は見ている。</span></p>
+<p>デザインとハック</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h1><strong>私たちを繋ぐもの</strong></h1>
+<p>たくさんの端末が相互に接続し、情報を共有している。<br />
+しかも、それぞれが異なる方法で。</p>
+<p>私たちはどうしてインターネットを使うことができるのだろうか？</p>
+<p>keywords:<br />
+プロトコル，パケット，サーバー，DNS，検索エンジン</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>インターネット</h2>
+<p><strong>LAN: Local Area Network</strong><br />
+施設内や端末間など狭い範囲のネットワーク。<br />
+最近は Wi-FI など無線 LAN の利用が増えている。</p>
+<p><strong>WAN: Wide Area Network</strong><br />
+地域・国・世界規模のネットワーク。<br />
+電話回線も WAN の一種。</p>
+<p>インターネット（the internet）は LAN や WAN などの全体。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>パケット</h2>
+<p>データは小さなパケットに分割してから送信される。<br />
+パケットは物理的な最短経路を選ぶわけではない。</p>
+<p>隣の人に送ったメールも、<br />
+実は地球の裏側を通ってから届いているかもしれない。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>サーバーとクライアント</h2>
+<p>インターネットでは、<br />
+接続する側を「クライアント」、<br />
+接続される側を「サーバー」と呼ぶ。</p>
+<p><strong>プロトコル</strong><br />
+通信のためのルール。通信を開始する段階で確認される。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>DNS: Domain Name System</h2>
+<p>IP アドレス（<code>142.251.42.163</code>など）は、人間には覚えにくい。<br />
+ドメイン名（<code>google.com</code>など）は覚えやすい。<br />
+この紐づけを行うのが DNS。</p>
+<p><strong>ICANN</strong><br />
+IP を管理する組織。<br />
+IP アドレスは世界中にあるサーバーに割り当てられている。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>ブラウザ</h2>
+<p>サーバーからダウンロードしたデータを表示するソフトウェア。<br />
+データの内容に応じて、適切な表示方法を選択する。<br />
+e.g.<br />
+Chrome, Firefox, Safari, Edge, Internet Explorer, Opera...</p>
+<p><strong>HTML, CSS, JavaScript</strong><br />
+Web ページを記述するための主要な言語。<br />
+HTML は文書の構造、CSS は見た目、JavaScript は動きを記述する。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>検索エンジン</h2>
+<p>どこにどんなサイトやページがあるかをデータベースに整理し、<br />
+検索クエリに応じて結果を返す。<br />
+<a href="http://google.com/">google.com/</a> や <a href="http://yahoo.co.jp/">yahoo.co.jp/</a> は、その窓口みたいなもの。</p>
+<p><strong>ダークウェブ</strong><br />
+主要な検索エンジンにインデックスされていないサイト群。ごく普通の日用品を売っていることもあるが、各サイト・ページのコンテンツが安全かどうかを見極めるのは難しい。かといって「検索エンジンに載っている = 安全」ではないので注意。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-class="lead" data-theme="gaia" class="lead" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--class:lead;--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<p>あえてたくさんの層・領域に分けることで<br />
+私たちはより柔軟に、より多くのことができるようになった。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-background-color="#111" data-background-image="none" data-class="lead" data-theme="gaia" class="lead" style="--background-color:#111;--background-image:none;--class:lead;--theme:gaia;background-color:#111;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;">
+<p>隠されたプロセス</p>
+<p>私たちを繋ぐもの</p>
+<p><strong style="color: #ccc; text-shadow: 0 0 20px rgba(150, 150 ,255, 1);"><span style="margin-left: .7em">&quot;彼ら&quot; は見ている。</span></strong></p>
+<p>デザインとハック</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h1><strong>&quot;彼ら&quot; は見ている</strong></h1>
+<p>大抵、通信そのものはオープンになっている。<br />
+つまり攻撃者は、通信の中身を見ることができる。</p>
+<p>では、どうやって私たちのプライバシーや安全は守られているのか。</p>
+<p>keywords:<br />
+暗号化，認証，ソーシャルエンジニアリング，トラッキング</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:40%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./rsc/EnigmaMachineLabeled.jpg&quot;);background-size:85%;"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="30" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:40%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h2>シーザー暗号，エニグマ</h2>
+<p>暗号化の目的：中身を秘密にしたまま情報を送る。</p>
+<p>シーザー暗号は、文字をずらして暗号化する。古代ローマのカエサル（Caesar）も使った古典的手法。</p>
+<p>エニグマは第二次世界大戦中にドイツが使った暗号機。シーザー暗号よりも複雑な仕組みで、文字の置換を行う。<br />
+結局、解読された。</p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>暗号化の基本戦術</h2>
+<p>「どうせ盗まれるなら、盗まれてもいいようにしよう。」</p>
+<p>重要な情報であればあるほど、人海戦術と頭脳の集結を呼び、<br />
+人間が手で計算できる程度のハードルは越えられてしまう。</p>
+<p><strong>TLS: Transport Layer Security</strong><br />
+暗号化通信を行うためのプロトコル。<br />
+<code>http://</code> ではなく <code>https://</code> で始まるサイトの通信は、<br />
+TLS で暗号化されている。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>改ざん検知</h2>
+<p>cf. セキュリティの三要素<br />
+可用性・機密性・<strong>完全性</strong></p>
+<p><strong>暗号学的ハッシュ関数</strong><br />
+データを入力すると、固定長のデータを出力する関数。<br />
+データの内容が 1bit でも変わると、出力も大きく変わる。<br />
+ハッシュ値を比較することで、データの一致を判定できる。<br />
+狙って特定のハッシュ値を出力するのは困難。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>承認 authorization と認証 authentication</h2>
+<p><strong>承認</strong>　…何をして良いかをチェックすること<br />
+<strong>認証</strong>　…相手が誰なのかをチェックすること<br />
+どっちも Auth と略されるのでややこしい。</p>
+<p><strong>鍵マークの意味</strong><br />
+サーバーとクライアントの間で通信が暗号化されていることを示す。そもそもサーバーが攻撃者側にあると無意味。</p>
+<p>攻撃者ではないことを認証しているわけではない。<br />
+通信が暗号化されていても当然、送信相手には中身が読める。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>サイバー攻撃</h2>
+<p>サイバー攻撃は常に行われている。<br />
+cf. <a href="https://www.nicter.jp/atlas">https://www.nicter.jp/atlas</a></p>
+<p>対策：<br />
+通信内容をチェックしたり、コンピュータ上で動く不審なプログラムを見つけることで、ある程度自動で対処している。<br />
+最近の Windows だと標準装備で Windows Defender がある。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>そのシステム／アプリは信頼できますか？</h2>
+<p><strong>マルウェアの脅威</strong></p>
+<p>キーボードアプリによるパスワード奪取のリスク<br />
+悪意のないシステムの不備を利用されてしまうリスク<br />
+買収後に悪意のあるシステムに変わってしまうリスク<br />
+経営難でマッチポンプを始める開発元…</p>
+<p>リスクをどの程度受け入れるのか、受け入れられるのか、<br />
+よく考える必要がある。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>人間という脆弱性</h2>
+<p>システムの脆弱性をなくすだけでは不十分。</p>
+<p><strong>ソーシャルエンジニアリング</strong><br />
+社会工学。情報セキュリティにおいては、<br />
+人間の性質を利用して、情報を盗む手法のこと。</p>
+<p>口頭での聞き出し、会話の盗み聞き、メールによる誘導、電話による詐欺、ショルダーハッキングなど。処理忘れの書類も危険。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>個人情報とトラッキング</h2>
+<p>個人情報を隠していれば安全・安心？</p>
+<p>cf. Netflix Prize の事件<br />
+オンライン上のそのほかの情報と付き合わせていくことで、<br />
+個人とデータを結びつけることができる。</p>
+<p><strong>広告ブロッカー</strong>（e.g. uBlock Origin）<br />
+ユーザーの追跡を切る役目もあるが完璧ではない。画面サイズやブラウザの種類、通信経路など、複数の情報の組み合わせで特定される。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-class="lead" data-theme="gaia" class="lead" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--class:lead;--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<p>通信を行う以上、情報は漏れるし、攻撃の脅威もある。<br />
+それを踏まえたうえで、対策を考える。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-background-color="#111" data-background-image="none" data-class="lead" data-theme="gaia" class="lead" style="--background-color:#111;--background-image:none;--class:lead;--theme:gaia;background-color:#111;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;">
+<p>隠されたプロセス</p>
+<p>私たちを繋ぐもの</p>
+<p><span style="margin-left: .6em">&quot;彼ら&quot; は見ている。</span></p>
+<p><strong style="color: #ccc; text-shadow: 0 0 20px rgba(150, 150 ,255, 1);">デザインとハック</strong></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h1><strong>デザインとハック</strong></h1>
+<p>システムには思想が反映される。<br />
+システムはどうデザインされ、ハックされるのか、<br />
+それらの営みはどのような思想に基づくのか。</p>
+<p>そして、どのように私たちを守るのか。</p>
+<p>keywords:<br />
+フールプルーフ，フェールセーフ，ゼロトラスト，心理的安全性</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./rsc/pexels-bogdan-krupin-11190692.jpg&quot;);filter:opacity(.8);"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="41" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h2>System</h2>
+<p>「系」、仕組みのこと。<br />
+　 cf. Solar System</p>
+<p>一連の出来事を起こす要素とその動きの集まり。</p>
+<p>電子的なものだけではない。人の集団や決めごと、地球の環境も、ある意味システム。</p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./rsc/pexels-cameron-casey-1722183.jpg&quot;);filter:opacity(.8);"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="42" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h2>Design</h2>
+<p>「設計」の意味。</p>
+<p>どうしたら期待通りの結果が得られるかを考えたり、それを当てはめること。</p>
+<p>グラフィックや建物のようなモノのデザインだけでなく、コトのデザインもある。</p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./rsc/pexels-cottonbro-studio-4709284.jpg&quot;);filter:opacity(.8);"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="43" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h2>Hack</h2>
+<p>うまくやること。</p>
+<p>システムの性質・設計を利用して、システムの課題を解決すること。</p>
+<p>元々は「たたき切る」「切り開く」などの意味。<br />
+クラッキングと対比される。</p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-class="lead" data-theme="gaia" class="lead" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--class:lead;--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<p><strong>Design</strong>: これからどんな system を作るか</p>
+<p>↓ 　　　 ↑</p>
+<p><strong>Hack</strong>: いまある system をどう活かすか</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>様々なアプローチ</h2>
+<p>最低限知っておくと良さそうなもの：</p>
+<ul>
+<li><strong>フールプルーフ</strong>（Fool Proof）: ボケてたら弾く/止める。</li>
+<li><strong>フェールセーフ</strong>（Fail Safe）: 失敗していたらも安全に止める。</li>
+<li><strong>ゼロトラスト</strong>（Zero Trust）: 常に誰も信用しない。毎回確認。</li>
+<li><strong>心理的安全性</strong>（Psychological Safety）: せめて心に余裕を。</li>
+</ul>
+<p>基本的な思想：<br />
+「過つは人の常」（To err is human.）<br />
+もっというと、すべてのものは壊れると思っている。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>セキュリティの三要素</h2>
+<p>CIA: Confidentiality, Integrity, Availability</p>
+<ul>
+<li><strong>機密性</strong>: 情報の閲覧・利用の制限</li>
+<li><strong>完全性</strong>: 情報の改ざん・劣化の防止</li>
+<li><strong>可用性</strong>: システムの利用可能性の確保</li>
+</ul>
+<p>情報を隠すことだけがセキュリティではない。<br />
+きちんと使えるようにすることも重要。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>フールプルーフ</h2>
+<p>例：</p>
+<div style="border-left: 10px solid #aaa; padding-left: .5em; background: #eee">
+ふたが閉まっていないと脱水モードが動かない洗濯機<br />
+ドアが閉じていないと動かない電子レンジ<br />
+人が便座に座っていないと水が出ないおしり洗浄機<br />
+ブレーキを踏んでいないとパーキングからドライブポジションに入らない車のギア<br />
+<a href="https://www.i-learning.jp/topics/column/useful/foolproof.html">https://www.i-learning.jp/topics/column/useful/foolproof.html</a>
+</div>
+<ul>
+<li>入力ミスの検知、アクセス権限の管理、装置の物理的な防護、etc.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>フェールセーフ</h2>
+<p>例：</p>
+<div style="border-left: 10px solid #aaa; padding-left: .5em; background: #eee">
+倒れると自動的にスイッチが切れる電気ストーブ<br />
+停電の時は降りたままで止まる踏み切りの遮断機<br />
+<a href="https://www.i-learning.jp/topics/column/useful/foolproof.html">https://www.i-learning.jp/topics/column/useful/foolproof.html</a>
+</div>
+<p>フェールソフト: 失敗していても安全に進める。継続性重視。<br />
+例）エンジンが壊れた飛行機</p>
+<ul>
+<li>自動シャットダウン, 自動バックアップ,<br />
+冗長化（フェールオーバー）, etc.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>ゼロトラスト</h2>
+<ul>
+<li>攻撃の巧妙化<br />
+（ゼロデイ攻撃、ソーシャルエンジニアリング、etc.）</li>
+<li>特定の施設内といった「境界防御」の限界<br />
+（クラウド利用、テレワーク、BYOD、etc.）</li>
+</ul>
+<p>→ 　ユーザーの認証を徹底 + 被害の拡大を防ぐ</p>
+<ul>
+<li>多要素認証, ソフト/ハードのログ監視, 遠隔でのデバイス管理, etc.</li>
+</ul>
+
+<p>境界がない分、認証システムの高度化が必要。<br />
+本物のデータで作った偽物の画面を見抜けるか？</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>攻撃者視点</h2>
+<p>セキュリティの弱点を探すには、攻撃者の視点で考える必要がある。<br />
+cf. 犯罪心理</p>
+<ul>
+<li><strong>攻撃者の動機</strong>: 何を得るために攻撃するのか？</li>
+<li><strong>攻撃者の手法</strong>: どのように攻撃するのか？</li>
+</ul>
+<p>→ 　暗号化・ハッシュ化、フェールセーフ/ソフト/オーバー、etc.</p>
+<p>本物のシステムをクラック等することはできないので、<br />
+定期的なハッキングコンテストなどで腕を磨く。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="51" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<p>見抜けますか？</p>
+<ul>
+<li>見えない文字（拡張子の表示設定, Unicode 制御文字）<br />
+<a href="https://forest.watch.impress.co.jp/docs/serial/yajiuma/1388917.html">https://forest.watch.impress.co.jp/docs/serial/yajiuma/1388917.html</a></li>
+<li>ミスリード URL, ホモグラフ攻撃<br />
+<a href="https://jpn.nec.com/cybersecurity/blog/220107/index.html">https://jpn.nec.com/cybersecurity/blog/220107/index.html</a></li>
+<li>アイコン偽装</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="52" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>心理的安全性</h2>
+<p>デザインとハックの両輪を回す。<br />
+発言・報連相しやすい環境づくり。</p>
+<p>cf. Google のプロジェクトアリストテレス</p>
+<p>主な目的：</p>
+<ul>
+<li>問題の早期発見</li>
+<li>解決のための情報共有</li>
+<li>新しいアイデアの検討</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="53" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>DX</h2>
+<p>デジタルトランスフォーメーション）デジタル技術を活用して、組織の構造や働き方を変革すること。セキュリティの担保は大前提。</p>
+<p>ハックの視点がないと、<br />
+脆弱性を見つけたり、新たな活用方法を見つけることが難しい。</p>
+<p>「○○ ができるなら、△△ もできるのでは？」<br />
+「でも、それは ◎◎ に修正する必要があるのでは？」<br />
+「しかし、そうすると □□ できなくなるのでは？」<br />
+利己的な利便性の追究 &amp; 高い倫理観の両立 + 全体の要求とのバランス</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="54" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-class="lead" data-theme="gaia" class="lead" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--class:lead;--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<p>間違う人、攻撃する人の視点で考える。</p>
+<p>デザインとハックのサイクルを回す。</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="55" data-background-color="#111" data-background-image="none" data-class="lead" data-theme="gaia" class="lead" style="--background-color:#111;--background-image:none;--class:lead;--theme:gaia;background-color:#111;background-image:none;background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h1><strong>まとめ</strong></h1>
+<p><strong style="color: #eee">魔法の正体は計算器の集合体。</strong></p>
+<p><strong style="color: #eee">役割分担で可能性を拡げる。</strong></p>
+<p><strong style="color: #eee">情報は漏れる前提で考える。</strong></p>
+<p><strong style="color: #eee">間違う人、攻撃する人の視点で考える。</strong></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="56" data-background-color="#fff" data-background-image="url('./rsc/index3.png')" data-theme="gaia" style="--background-color:#fff;--background-image:url('./rsc/index3.png');--theme:gaia;background-color:#fff;background-image:url('./rsc/index3.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h1>Others' License</h1>
+<p>Twemoji<br />
+Copyright 2020 Twitter, Inc and other contributors<br />
+Graphics licensed under CC-BY 4.0: <a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></p>
+<p>Lato<br />
+Copyright 2010-2019 Łukasz Dziedzic (<a href="mailto:dziedzic@typoland.com">dziedzic@typoland.com</a>)<br />
+Licensed under SIL Open Font License 1.1 (<a href="http://scripts.sil.org/OFL">http://scripts.sil.org/OFL</a>)</p>
+</section>
+<script>!function(){"use strict";const t="marpitSVGPolyfill:setZoomFactor,",e=Symbol();let r,o;function n(n){const i="object"==typeof n&&n.target||document,a="object"==typeof n?n.zoom:n;window[e]||(Object.defineProperty(window,e,{configurable:!0,value:!0}),window.addEventListener("message",(({data:e,origin:r})=>{if(r===window.origin)try{if(e&&"string"==typeof e&&e.startsWith(t)){const[,t]=e.split(","),r=Number.parseFloat(t);Number.isNaN(r)||(o=r)}}catch(t){console.error(t)}})));let l=!1;Array.from(i.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,n,i,s;t.style.transform||(t.style.transform="translateZ(0)");const c=a||o||t.currentScale||1;r!==c&&(r=c,l=c);const d=t.getBoundingClientRect(),{length:f}=t.children;for(let r=0;r<f;r+=1){const o=t.children[r];if(o.getScreenCTM){const t=o.getScreenCTM();if(t){const r=null!==(n=null===(e=o.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==n?n:0,a=null!==(s=null===(i=o.y)||void 0===i?void 0:i.baseVal.value)&&void 0!==s?s:0,l=o.children.length;for(let e=0;e<l;e+=1){const n=o.children[e];if("SECTION"===n.tagName){const{style:e}=n;e.transformOrigin||(e.transformOrigin=`${-r}px ${-a}px`),e.transform=`scale(${c}) matrix(${t.a}, ${t.b}, ${t.c}, ${t.d}, ${t.e-d.left}, ${t.f-d.top}) translateZ(0.0001px)`;break}}}}}})),!1!==l&&Array.from(i.querySelectorAll("iframe"),(({contentWindow:e})=>{null==e||e.postMessage(`${t}${l}`,"null"===window.origin?"*":window.origin)}))}r=1,o=void 0;const i=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};function a({once:t=!1,target:e=document}={}){const r="Apple Computer, Inc."===navigator.vendor?[n]:[];let o=!t;const a=()=>{for(const t of r)t({target:e});!function(t=document){Array.from(t.querySelectorAll('svg[data-marp-fitting="svg"]'),(t=>{var e;const r=t.firstChild,o=r.firstChild,{scrollWidth:n,scrollHeight:a}=o;let l,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(l=null===(e=t.parentElement)||void 0===e?void 0:e.parentElement),t.hasAttribute("data-marp-fitting-math")&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft||"0")-parseFloat(t.paddingRight||"0"));e&&(s=e)}const c=Math.max(n,s),d=Math.max(a,1),f=`0 0 ${c} ${d}`;i(r,"width",`${c}`),i(r,"height",`${d}`),i(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),i(t,"viewBox",f)&&t.classList.toggle("__reflow__")}))}(e),o&&window.requestAnimationFrame(a)};return a(),()=>{o=!1}}const l=Symbol(),s=document.currentScript;((t=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(t[l])return t[l];const e=a({target:t}),r=()=>{e(),delete t[l]};Object.defineProperty(t,l,{configurable:!0,value:r})})(s?s.getRootNode():document)}();
+</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="0" tabindex="0"><p>&quot;魔法&quot;のデザインとハックを考える</p></div><div class="bespoke-marp-note" data-index="4" tabindex="0"><p>https://commons.wikimedia.org/wiki/File:Clarke_sm.jpg</p><p>This work has been released into the public domain by its author, Mamyjomarash at the Wikipedia project.</p></div><div class="bespoke-marp-note" data-index="6" tabindex="0"><p>正確に例えようとすると事前に共有すべき情報が増え過ぎてしまうので、この段階では「ピタゴラ装置」としている。</p></div><div class="bespoke-marp-note" data-index="8" tabindex="0"><p>---
+
+cf.
+https://www.google.com/search?q=論理回路&amp;tbm=isch
+https://www.google.com/search?q=IC&amp;tbm=isch</p></div><div class="bespoke-marp-note" data-index="13" tabindex="0"><p>jpg, jpeg, WAV, wav... 出力時の表記の違いが（歴史的な経緯で）内部的なフォーマットの違いと関わっていることもある。</p></div><div class="bespoke-marp-note" data-index="40" tabindex="0"><p>Photo by Bogdan Krupin from Pexels: https://www.pexels.com/photo/wooden-ceiling-with-solar-system-decoration-11190692/</p></div><div class="bespoke-marp-note" data-index="41" tabindex="0"><p>Photo by Cameron Casey: https://www.pexels.com/photo/sears-tower-usa-1722183/</p></div><div class="bespoke-marp-note" data-index="42" tabindex="0"><p>Photo by cottonbro studio from Pexels: https://www.pexels.com/photo/woman-in-white-t-shirt-4709284/</p></div><div class="bespoke-marp-note" data-index="43" tabindex="0"><p>相互に影響しながら、system の在り方が変化していく。</p></div><div class="bespoke-marp-note" data-index="44" tabindex="0"><p>cf. https://eigo-kobako.blog.ss-blog.jp/2013-03-22</p></div><div class="bespoke-marp-note" data-index="48" tabindex="0"><p>複数のシステムを組み合わせて実現</p><p>ビヘイビアの検証</p></div><div class="bespoke-marp-note" data-index="52" tabindex="0"><p>Unicode制御文字は必要な人もいるのでオフにはしていない。改行だって立派な制御文字</p><p>拡張子はよくわかっていない人が消すと大惨事なのでふだんは非表示</p></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@1.7.1/lib/bespoke.js.LICENSE.txt */
+!function(){"use strict";const e=document.body,t=(...e)=>history.replaceState(...e),n="presenter",r="next",o=["",n,r],a="data-bespoke-marp-",i=(e,{protocol:t,host:n,pathname:r,hash:o}=location)=>{const a=e.toString();return`${t}//${n}${r}${a?"?":""}${a}${o}`},s=()=>e.dataset.bespokeView,l=e=>new URLSearchParams(location.search).get(e),d=(e,n={})=>{var r;const o={location,setter:t,...n},a=new URLSearchParams(o.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?a.set(t,n):a.delete(t)}try{o.setter({...null!==(r=window.history.state)&&void 0!==r?r:{}},"",i(a,o.location))}catch(e){console.error(e)}},c=(()=>{const e="bespoke-marp";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch(e){return!1}})(),u=e=>{try{return localStorage.getItem(e)}catch(e){return null}},f=(e,t)=>{try{return localStorage.setItem(e,t),!0}catch(e){return!1}},m=e=>{try{return localStorage.removeItem(e),!0}catch(e){return!1}},g=(e,t)=>{const n="aria-hidden";t?e.setAttribute(n,"true"):e.removeAttribute(n)},p=e=>{e.parent.classList.add("bespoke-marp-parent"),e.slides.forEach((e=>e.classList.add("bespoke-marp-slide"))),e.on("activate",(t=>{const n="bespoke-marp-active",r=t.slide,o=r.classList,a=!o.contains(n);if(e.slides.forEach((e=>{e.classList.remove(n),g(e,!0)})),o.add(n),g(r,!1),a){const e=`${n}-ready`;o.add(e),document.body.clientHeight,o.remove(e)}}))},v=e=>{let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map((e=>[null,...e.querySelectorAll("[data-marpit-fragment]")]))});const r=r=>void 0!==e.fragments[t][n+r],o=(r,o)=>{t=r,n=o,e.fragments.forEach(((e,t)=>{e.forEach(((e,n)=>{if(null==e)return;const i=t<r||t===r&&n<=o;e.setAttribute(`${a}fragment`,(i?"":"in")+"active");const s=`${a}current-fragment`;t===r&&n===o?e.setAttribute(s,"current"):e.removeAttribute(s)}))})),e.fragmentIndex=o;const i={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:o};e.fire("fragment",i)};e.on("next",(({fragment:a=!0})=>{if(a){if(r(1))return o(t,n+1),!1;const a=t+1;e.fragments[a]&&o(a,0)}else{const r=e.fragments[t].length;if(n+1<r)return o(t,r-1),!1;const a=e.fragments[t+1];a&&o(t+1,a.length-1)}})),e.on("prev",(({fragment:a=!0})=>{if(r(-1)&&a)return o(t,n-1),!1;const i=t-1;e.fragments[i]&&o(i,e.fragments[i].length-1)})),e.on("slide",(({index:t,fragment:n})=>{let r=0;if(void 0!==n){const o=e.fragments[t];if(o){const{length:e}=o;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}o(t,r)})),o(0,0)},h=document,y=()=>!(!h.fullscreenEnabled&&!h.webkitFullscreenEnabled),b=()=>!(!h.fullscreenElement&&!h.webkitFullscreenElement),x=e=>{e.fullscreen=()=>{y()&&(async()=>{return b()?null===(e=h.exitFullscreen||h.webkitExitFullscreen)||void 0===e?void 0:e.call(h):((e=h.body)=>{var t;return null===(t=e.requestFullscreen||e.webkitRequestFullscreen)||void 0===t?void 0:t.call(e)})();var e})()},document.addEventListener("keydown",(t=>{"f"!==t.key&&"F11"!==t.key||t.altKey||t.ctrlKey||t.metaKey||!y()||(e.fullscreen(),t.preventDefault())}))},w="bespoke-marp-inactive",k=(e=2e3)=>({parent:t,fire:n})=>{const r=t.classList,o=e=>n(`marp-${e?"":"in"}active`);let a;const i=()=>{a&&clearTimeout(a),a=setTimeout((()=>{r.add(w),o()}),e),r.contains(w)&&(r.remove(w),o(!0))};for(const e of["mousedown","mousemove","touchend"])document.addEventListener(e,i);setTimeout(i,0)},E=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"],L=e=>{e.parent.addEventListener("keydown",(e=>{if(!e.target)return;const t=e.target;(E.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()}))},$=e=>{window.addEventListener("load",(()=>{for(const t of e.slides){const e=t.querySelector("[data-marp-fitting]")?"":"hideable";t.setAttribute(`${a}load`,e)}}))},S=({interval:e=250}={})=>t=>{document.addEventListener("keydown",(e=>{if(" "===e.key&&e.shiftKey)t.prev();else if("ArrowLeft"===e.key||"ArrowUp"===e.key||"PageUp"===e.key)t.prev({fragment:!e.shiftKey});else if(" "!==e.key||e.shiftKey)if("ArrowRight"===e.key||"ArrowDown"===e.key||"PageDown"===e.key)t.next({fragment:!e.shiftKey});else if("End"===e.key)t.slide(t.slides.length-1,{fragment:-1});else{if("Home"!==e.key)return;t.slide(0)}else t.next();e.preventDefault()}));let n,r,o=0;t.parent.addEventListener("wheel",(a=>{let i=!1;const s=(e,t)=>{e&&(i=i||((e,t)=>((e,t)=>{const n="X"===t?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]})(e,t)&&((e,t)=>{const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r})(getComputedStyle(e),t))(e,t)),(null==e?void 0:e.parentElement)&&s(e.parentElement,t)};if(0!==a.deltaX&&s(a.target,"X"),0!==a.deltaY&&s(a.target,"Y"),i)return;a.preventDefault();const l=Math.sqrt(a.deltaX**2+a.deltaY**2);if(void 0!==a.wheelDelta){if(void 0===a.webkitForce&&Math.abs(a.wheelDelta)<40)return;if(a.deltaMode===a.DOM_DELTA_PIXEL&&l<4)return}else if(a.deltaMode===a.DOM_DELTA_PIXEL&&l<12)return;r&&clearTimeout(r),r=setTimeout((()=>{n=0}),e);const d=Date.now()-o<e,c=l<=n;if(n=l,d||c)return;let u;(a.deltaX>0||a.deltaY>0)&&(u="next"),(a.deltaX<0||a.deltaY<0)&&(u="prev"),u&&(t[u](),o=Date.now())}))},P=(e=".bespoke-marp-osc")=>{const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[${a}osc=${JSON.stringify(e)}]`).forEach(n)};return y()||n("fullscreen",(e=>e.style.display="none")),c||n("presenter",(e=>{e.disabled=!0,e.title="Presenter view is disabled due to restricted localStorage."})),e=>{t.addEventListener("click",(t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;n&&t.target.blur();const r={fragment:!t.shiftKey};"next"===n?e.next(r):"prev"===n?e.prev(r):"fullscreen"===n?null==e||e.fullscreen():"presenter"===n&&e.openPresenterView()}})),e.parent.appendChild(t),e.on("activate",(({index:t})=>{n("page",(n=>n.textContent=`Page ${t+1} of ${e.slides.length}`))})),e.on("fragment",(({index:t,fragments:r,fragmentIndex:o})=>{n("prev",(e=>e.disabled=0===t&&0===o)),n("next",(n=>n.disabled=t===e.slides.length-1&&o===r.length-1))})),e.on("marp-active",(()=>g(t,!1))),e.on("marp-inactive",(()=>g(t,!0))),y()&&(e=>{for(const t of["","webkit"])h.addEventListener(t+"fullscreenchange",e)})((()=>n("fullscreen",(e=>e.classList.toggle("exit",y()&&b())))))}},T=e=>{window.addEventListener("message",(t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");let o=Number.parseInt(t,10),a=Number.parseInt(n,10)+1;a>=e.fragments[o].length&&(o+=1,a=0),e.slide(o,{fragment:a})}}))};var I=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"];let N=e=>String(e).replace(/[&<>"']/g,(e=>`&${C[e]};`)),C={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},A="dangerouslySetInnerHTML",D={className:"class",htmlFor:"for"},M={};function B(e,t){let n=[],r="";t=t||{};for(let e=arguments.length;e-- >2;)n.push(arguments[e]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(let e in t)!1!==t[e]&&null!=t[e]&&e!==A&&(r+=` ${D[e]?D[e]:N(e)}="${N(t[e])}"`);r+=">"}if(-1===I.indexOf(e)){if(t[A])r+=t[A].__html;else for(;n.length;){let e=n.pop();if(e)if(e.pop)for(let t=e.length;t--;)n.push(e[t]);else r+=!0===M[e]?e:N(e)}r+=e?`</${e}>`:""}return M[r]=!0,r}const K=({children:e})=>B(null,null,...e),O="bespoke-marp-presenter-",q={container:`${O}container`,dragbar:`${O}dragbar-container`,next:`${O}next`,nextContainer:`${O}next-container`,noteContainer:`${O}note-container`,noteWrapper:`${O}note-wrapper`,noteButtons:`${O}note-buttons`,infoContainer:`${O}info-container`,infoPage:`${O}info-page`,infoPageText:`${O}info-page-text`,infoPagePrev:`${O}info-page-prev`,infoPageNext:`${O}info-page-next`,noteButtonsBigger:`${O}note-bigger`,noteButtonsSmaller:`${O}note-smaller`,infoTime:`${O}info-time`,infoTimer:`${O}info-timer`},_=e=>{const{title:t}=document;document.title="[Presenter view]"+(t?` - ${t}`:"");const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=q.container,t.appendChild(e),t.insertAdjacentHTML("beforeend",B(K,null,B("div",{class:q.nextContainer},B("iframe",{class:q.next,src:"?view=next"})),B("div",{class:q.dragbar}),B("div",{class:q.noteContainer},B("div",{class:q.noteWrapper}),B("div",{class:q.noteButtons},B("button",{class:q.noteButtonsSmaller,tabindex:"-1",title:"Smaller notes font size"},"Smaller notes font size"),B("button",{class:q.noteButtonsBigger,tabindex:"-1",title:"Bigger notes font size"},"Bigger notes font size"))),B("div",{class:q.infoContainer},B("div",{class:q.infoPage},B("button",{class:q.infoPagePrev,tabindex:"-1",title:"Previous"},"Previous"),B("span",{class:q.infoPageText}),B("button",{class:q.infoPageNext,tabindex:"-1",title:"Next"},"Next")),B("time",{class:q.infoTime,title:"Current time"}),B("time",{class:q.infoTimer,title:"Timer"})))),t})(e.parent)),(e=>{let t=!1;r(q.dragbar).addEventListener("mousedown",(()=>{t=!0,r(q.dragbar).classList.add("active")})),window.addEventListener("mouseup",(()=>{t=!1,r(q.dragbar).classList.remove("active")})),window.addEventListener("mousemove",(e=>{if(!t)return;const n=e.clientX/document.documentElement.clientWidth*100;r(q.container).style.setProperty("--bespoke-marp-presenter-split-ratio",`${Math.max(0,Math.min(100,n))}%`)})),r(q.nextContainer).addEventListener("click",(()=>e.next()));const n=r(q.next),o=(a=n,(e,t)=>{var n;return null===(n=a.contentWindow)||void 0===n?void 0:n.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin)});var a;n.addEventListener("load",(()=>{r(q.nextContainer).classList.add("active"),o(e.slide(),e.fragmentIndex),e.on("fragment",(({index:e,fragmentIndex:t})=>o(e,t)))}));const i=document.querySelectorAll(".bespoke-marp-note");i.forEach((e=>{e.addEventListener("keydown",(e=>e.stopPropagation())),r(q.noteWrapper).appendChild(e)})),e.on("activate",(()=>i.forEach((t=>t.classList.toggle("active",t.dataset.index==e.slide())))));let s=0;const l=e=>{s=Math.max(-5,s+e),r(q.noteContainer).style.setProperty("--bespoke-marp-note-font-scale",(1.2**s).toFixed(4))},d=()=>l(1),c=()=>l(-1),u=r(q.noteButtonsBigger),f=r(q.noteButtonsSmaller);u.addEventListener("click",(()=>{u.blur(),d()})),f.addEventListener("click",(()=>{f.blur(),c()})),document.addEventListener("keydown",(e=>{"+"===e.key&&d(),"-"===e.key&&c()}),!0),e.on("activate",(({index:t})=>{r(q.infoPageText).textContent=`${t+1} / ${e.slides.length}`}));const m=r(q.infoPagePrev),g=r(q.infoPageNext);m.addEventListener("click",(t=>{m.blur(),e.prev({fragment:!t.shiftKey})})),g.addEventListener("click",(t=>{g.blur(),e.next({fragment:!t.shiftKey})})),e.on("fragment",(({index:t,fragments:n,fragmentIndex:r})=>{m.disabled=0===t&&0===r,g.disabled=t===e.slides.length-1&&r===n.length-1}));let p=new Date;const v=()=>{const e=new Date,t=e=>`${Math.floor(e)}`.padStart(2,"0"),n=e.getTime()-p.getTime(),o=t(n/1e3%60),a=t(n/1e3/60%60),i=t(n/36e5%24);r(q.infoTime).textContent=e.toLocaleTimeString(),r(q.infoTimer).textContent=`${i}:${a}:${o}`};v(),setInterval(v,250),r(q.infoTimer).addEventListener("click",(()=>{p=new Date}))})(e)},X=e=>{if(!(e=>e.syncKey&&"string"==typeof e.syncKey)(e))throw new Error("The current instance of Bespoke.js is invalid for Marp bespoke presenter plugin.");Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:F},presenterUrl:{enumerable:!0,get:U}}),c&&document.addEventListener("keydown",(t=>{"p"!==t.key||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())}))};function F(){const{max:e,floor:t}=Math,n=e(t(.85*window.innerWidth),640),r=e(t(.85*window.innerHeight),360);return window.open(this.presenterUrl,O+this.syncKey,`width=${n},height=${r},menubar=no,toolbar=no`)}function U(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),i(e)}const V=e=>{const t=s();return t===r&&e.appendChild(document.createElement("span")),{"":X,[n]:_,[r]:T}[t]},R=e=>{e.on("activate",(t=>{document.querySelectorAll(".bespoke-progress-parent > .bespoke-progress-bar").forEach((n=>{n.style.flexBasis=100*t.index/(e.slides.length-1)+"%"}))}))},j=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t},H=(e={})=>{const t={history:!0,...e};return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},o=(t={fragment:!0})=>{((t,n)=>{const{min:r,max:o}=Math,{fragments:a,slides:i}=e,s=o(0,r(t,i.length-1)),l=o(0,r(n||0,a[s].length-1));s===e.slide()&&l===e.fragmentIndex||e.slide(s,{fragment:l})})((j(location.hash.slice(1))||1)-1,t.fragment?j(l("f")||""):null)};e.on("fragment",(({index:e,fragmentIndex:r})=>{n||d({f:0===r||r.toString()},{location:{...location,hash:`#${e+1}`},setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})})),setTimeout((()=>{o(),window.addEventListener("hashchange",(()=>r((()=>{o({fragment:!1}),d({f:void 0})})))),window.addEventListener("popstate",(()=>{n||r((()=>o()))})),n=!1}),0)}},W=(e={})=>{var n;const r=e.key||(null===(n=window.history.state)||void 0===n?void 0:n.marpBespokeSyncKey)||Math.random().toString(36).slice(2),o=`bespoke-marp-sync-${r}`;var a;a={marpBespokeSyncKey:r},d({},{setter:(e,...n)=>t({...e,...a},...n)});const i=()=>{const e=u(o);return e?JSON.parse(e):Object.create(null)},s=e=>{const t=i(),n={...t,...e(t)};return f(o,JSON.stringify(n)),n},l=()=>{window.removeEventListener("pageshow",l),s((e=>({reference:(e.reference||0)+1})))};return e=>{l(),Object.defineProperty(e,"syncKey",{value:r,enumerable:!0});let t=!0;setTimeout((()=>{e.on("fragment",(e=>{t&&s((()=>({index:e.index,fragmentIndex:e.fragmentIndex})))}))}),0),window.addEventListener("storage",(n=>{if(n.key===o&&n.oldValue&&n.newValue){const r=JSON.parse(n.oldValue),o=JSON.parse(n.newValue);if(r.index!==o.index||r.fragmentIndex!==o.fragmentIndex)try{t=!1,e.slide(o.index,{fragment:o.fragmentIndex})}finally{t=!0}}}));const n=()=>{const{reference:e}=i();void 0===e||e<=1?m(o):s((()=>({reference:e-1})))};window.addEventListener("pagehide",(e=>{e.persisted&&window.addEventListener("pageshow",l),n()})),e.on("destroy",n)}},{PI:Y,abs:J,sqrt:z,atan2:G}=Math,Q={passive:!0},Z=({slope:e=-.7,swipeThreshold:t=30}={})=>n=>{let r;const o=n.parent,a=e=>{const t=o.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};o.addEventListener("touchstart",(({touches:e})=>{r=1===e.length?a(e[0]):void 0}),Q),o.addEventListener("touchmove",(e=>{if(r)if(1===e.touches.length){e.preventDefault();const t=a(e.touches[0]),n=t.x-r.x,o=t.y-r.y;r.delta=z(J(n)**2+J(o)**2),r.radian=G(n,o)}else r=void 0})),o.addEventListener("touchend",(o=>{if(r){if(r.delta&&r.delta>=t&&r.radian){const t=(r.radian-e+Y)%(2*Y)-Y;n[t<0?"next":"prev"](),o.stopPropagation()}r=void 0}}),Q)},ee="_tA",te=e=>{const t=document.documentTransition;if(!t)return;let n;e._tP=!1;const r=(n,{back:r,cond:o})=>a=>{var i,s;const l=e.slides[e.slide()].querySelector("section[data-transition]");if(!l)return!0;const d=document.querySelector(".bespoke-marp-osc"),c=d?[d]:void 0;if(e._tP){if(a._tA){e._tP=!1;try{t.start({sharedElements:c}).catch((()=>{}))}catch(e){}return!0}}else{if(!o(a))return!0;const d="transition"+(a.back||r?"Back":""),u=Number.parseInt(null!==(i=l.dataset[`${d}Duration`])&&void 0!==i?i:"",10),f=Number.parseInt(null!==(s=l.dataset[`${d}Delay`])&&void 0!==s?s:"",10),m={};Number.isNaN(u)||(m.duration=u.toString()),Number.isNaN(f)||(m.delay=f.toString()),e._tP=t.prepare({rootTransition:l.dataset[d],rootConfig:m,sharedElements:c}).then((()=>n(a))).catch((()=>n(a)))}return!1};e.on("prev",r((t=>e.prev({...t,[ee]:!0})),{back:!0,cond:e=>{var t;return e.index>0&&!((null===(t=e.fragment)||void 0===t||t)&&n.fragmentIndex>0)}})),e.on("next",r((t=>e.next({...t,[ee]:!0})),{cond:t=>t.index+1<e.slides.length&&!(n.fragmentIndex+1<n.fragments.length)})),setTimeout((()=>{e.on("slide",r((t=>e.slide(t.index,{...t,[ee]:!0})),{cond:t=>{const n=e.slide();return t.index!==n&&(t.back=t.index<n,!0)}}))}),0),e.on("fragment",(e=>{n=e}))};let ne;const re=()=>(void 0===ne&&(ne="wakeLock"in navigator&&navigator.wakeLock),ne),oe=async()=>{const e=re();if(e)try{return await e.request("screen")}catch(e){console.warn(e)}return null},ae=async()=>{if(!re())return;let e;const t=()=>{e&&"visible"===document.visibilityState&&oe()};for(const e of["visibilitychange","fullscreenchange"])document.addEventListener(e,t);return e=await oe(),e};((t=document.getElementById("p"))=>{(()=>{const t=l("view");e.dataset.bespokeView=t===r||t===n?t:""})();const a=(e=>{const t=l(e);return d({[e]:void 0}),t})("sync")||void 0;var i,c,u,f,m,g,h,y,b,w,E,T;i=t,c=((...e)=>{const t=o.findIndex((e=>s()===e));return e.map((([e,n])=>e[t]&&n)).filter((e=>e))})([[1,1,0],W({key:a})],[[1,1,1],V(t)],[[1,1,0],L],[[1,1,1],p],[[1,0,0],k()],[[1,1,1],$],[[1,1,1],H({history:!1})],[[1,1,0],S()],[[1,1,0],x],[[1,0,0],R],[[1,1,0],Z()],[[1,0,0],P()],[[1,0,0],te],[[1,1,1],v],[[1,1,0],ae]),f=1===(i.parent||i).nodeType?i.parent||i:document.querySelector(i.parent||i),m=[].filter.call("string"==typeof i.slides?f.querySelectorAll(i.slides):i.slides||f.children,(function(e){return"SCRIPT"!==e.nodeName})),g={},h=function(e,t){return(t=t||{}).index=m.indexOf(e),t.slide=e,t},w=function(e,t){m[e]&&(u&&b("deactivate",h(u,t)),u=m[e],b("activate",h(u,t)))},E=function(e,t){var n=m.indexOf(u)+e;b(e>0?"next":"prev",h(u,t))&&w(n,t)},T={off:y=function(e,t){g[e]=(g[e]||[]).filter((function(e){return e!==t}))},on:function(e,t){return(g[e]||(g[e]=[])).push(t),y.bind(null,e,t)},fire:b=function(e,t){return(g[e]||[]).reduce((function(e,n){return e&&!1!==n(t)}),!0)},slide:function(e,t){if(!arguments.length)return m.indexOf(u);b("slide",h(m[e],t))&&w(e,t)},next:E.bind(null,1),prev:E.bind(null,-1),parent:f,slides:m,destroy:function(e){b("destroy",h(u,e)),g={}}},(c||[]).forEach((function(e){e(T)})),u||w(0)})()}();</script></body></html>
