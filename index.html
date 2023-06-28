@@ -12,6 +12,42 @@
   <link rel="stylesheet" href="index.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono" rel="stylesheet">
   <title>live as notes /////////////////////</title>
+  <script>
+    // https://qiita.com/yd_niku/items/4a3b0ae6a2c29ef14a6d
+    var _ = require('underscore');
+    
+    var Query = {
+        parse: function (query) {
+            var parts=  query.replace(/^\?/, '').split('&');
+            var params = {};
+            _.each(parts, function (value) {
+                var part = value.split('=');
+    
+                params[part[0]] = part[1];
+            });
+    
+            return params;
+        },
+        stringify : function (params) {
+            return _.map(params, function (value, key) {
+                return key + '=' + value;
+            }).join('&');
+        },
+        parseFromURL: function(url) {
+            var matched = url.match(/\?(.*?)#?$/);
+            return !matched || !matched.length ? null : this.parse(matched[1]);
+        }
+    };
+    
+    module.exports = Query;
+
+    var query = Query.parse(location.search);
+    console.log(query);
+
+    if (query = {q:"sssxr"}){
+      window.location.href('https://liveasnotes.github.io/SSSXR/')
+    }
+  </script>
 </head>
 
 <body>
